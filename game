@@ -1,22 +1,17 @@
 """Connect Four
 
-Exercises
-
-1. Change the colors.
-2. Draw squares instead of circles for open spaces.
-3. Add logic to detect a full row.
-4. Create a random computer player.
-5. How would you detect a winner?
+ejemplo de conecta 4
 """
 
 from turtle import *
 
 from freegames import line
 
+# cambio  en colores para los turnos 
 turns = {'orange': 'green', 'green': 'orange'}
 state = {'player': 'green', 'rows': [0] * 8}
 
-
+# creacion de la tabla de juego
 def grid():
     """Draw Connect Four grid."""
     bgcolor('light blue')
@@ -32,7 +27,7 @@ def grid():
 
     update()
 
-
+# definiendo al jugador y los turnos 
 def tap(x, y):
     """Draw orange or green circle in tapped row."""
     player = state['player']
